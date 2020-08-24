@@ -2,6 +2,7 @@
 // Generate a sequence of given (n) random numbers and save the generated data into a text file with space delimited values. Use Linear Congruential Method (LCM) to generate the random numbers. Seed (x0), constant multiplier (a), increment (c), and modulus (m) will be given using standard keyboard.
 // • Input: From console
 // • Output: File
+
 #include <fstream>
 #include <iostream>
 #include <conio.h>
@@ -73,8 +74,26 @@ int main()
     file.close();
     return 0;
 }
+/* Input
 
+Enter the number of random numbers to generate:3
+Enter the value of seed X0:27
 
+Enter the value of a:17
+
+Enter the value of c:43
+
+Enter the value of m:100
+
+Output: 
+
+0.02
+
+0.77
+
+0.52
+
+*/
 
 // #include <iostream>
 // #include <fstream>
