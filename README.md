@@ -1,1 +1,7 @@
-![FCFS](https://user-images.githubusercontent.com/37833324/68083915-df649980-fe58-11e9-80f8-07251fd3c496.PNG)
+All Lab code is here
+
+## 4th year 1st semester
+
+1. CSE4112 Parallel Processing and Distributed System Lab
+2. CSE4132 Computer simulation and Modeling Lab
+3. CSE4141 Computer Peripherals and Interfacing Lab 
