@@ -1,0 +1,16 @@
+Mixed LCG:
+Thus the obtained random numbers are:
+
+0.02
+
+0.77
+
+0.52
+Mixed LCG:
+Thus the obtained random numbers are:
+
+0.02
+
+0.77
+
+0.52

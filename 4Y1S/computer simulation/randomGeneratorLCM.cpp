@@ -11,8 +11,9 @@ using namespace std;
 
 int main()
 {
-   fstream file;
-   file.open ("output.txt", ios::out | ios::in );
+    char filename[] = "randomGeneratorLCMoutput.txt";
+    fstream file;
+    file.open(filename, ios::out | ios::in | ios::app);
 
     int x[10], n, a, c, m, i, j;
     float r[10];
@@ -26,50 +27,45 @@ int main()
     cin >> c;
     cout << "\nEnter the value of m:";
     cin >> m;
-    i = 0;
+
     r[0] = (float)x[0] / m;
-    
+
     if (a == 1)
     {
-        cout << "\n  Additive LCG :";
-        do
+        file << "Additive LCG :";
+        for (i = 0; i <= n; i++)
         {
-
             x[i + 1] = (x[i] + c) % m;
             r[i + 1] = (float)x[i + 1] / m;
-            i++;
-        } while (i <= n);
+        }
     }
     else if (c == 0)
     {
-        cout << "\nMultiplicative LCG:";
-        do
-        {
+        file << "Multiplicative LCG:";
 
+        for (i = 0; i <= n; i++)
+        {
             x[i + 1] = (a * x[i]) % m;
             r[i + 1] = (float)x[i + 1] / m;
-            i++;
-        } while (i <= n);
+        }
     }
     else
     {
-        cout << "\n Mixed LCG:"<<endl;
-        do
+        file << "Mixed LCG:";
+        for (i = 0; i <= n; i++)
         {
-
             x[i + 1] = (a * x[i] + c) % m;
             r[i + 1] = (float)x[i + 1] / m;
-            i++;
-        } while (i <= n);
+        }
     }
-    cout<< "i = "<<i<<endl;
-    cout << "Thus the obtained random numbers are:";
+    cout << "i = " << i << endl;
+    file << "\nThus the obtained random numbers are:" << endl;
     for (j = 1; j < i; j++)
     {
         // Writing on file
-        file << endl;
-        file << r[j] <<endl;
-      
+
+        file << endl
+             << r[j] << endl;
     }
     file.close();
     return 0;
@@ -120,4 +116,46 @@ Output:
 //   //closing the file
 //   file.close();
 //   return 0;
+// }
+
+
+
+// #include <fstream>
+// #include <iostream>
+// using namespace std;
+
+// int main(void)
+// {
+
+//      char filename[ ] = "Informacije.txt";
+//      fstream appendFileToWorkWith;
+
+//      appendFileToWorkWith.open(filename, std::fstream::in | std::fstream::out | std::fstream::app);
+
+
+//       // If file does not exist, Create new file
+//       if (!appendFileToWorkWith ) 
+//       {
+//         cout << "Cannot open file, file does not exist. Creating new file..";
+
+//         appendFileToWorkWith.open(filename,  fstream::in | fstream::out | fstream::trunc);
+//         appendFileToWorkWith <<"\n";
+//         appendFileToWorkWith.close();
+
+//        } 
+//       else   
+//       {    // use existing file
+//          cout<<"success "<<filename <<" found. \n";
+//          cout<<"\nAppending writing and working with existing file"<<"\n---\n";
+
+//          appendFileToWorkWith << "Appending writing and working with existing file"<<"\n---\n";
+//          appendFileToWorkWith.close();
+//          cout<<"\n";
+
+//     }
+
+
+
+
+//    return 0;
 // }
