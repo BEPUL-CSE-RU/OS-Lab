@@ -39,6 +39,6 @@ $ sudo apt-get install openmpi-bin
 compile:   mpicc filename.c -o filename
 
 run         :   mpirun -np 4 ./filename
-
+run(default)         :   mpirun ./filename
 source code:
 https://drive.google.com/file/d/18JonHpnwjVPe1q0ig17y9KP2_S-LbvMN/view
